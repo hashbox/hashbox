@@ -20,6 +20,7 @@ logo_dark: assets/images/favicon.ico
 favicon: assets/images/favicon.ico
 production_url: https://hashbox.github.io/
 source_url: https://github.com/hashbox/hashbox.github.io/
+CNAME: #add cname for website to be created
 
 # Social info
 navigation: True # show the navbar links
@@ -46,8 +47,13 @@ permalink: /:title
 # Tags' info in `_data/tags_info.yml`
 
 # gems and other configs
+<<<<<<< HEAD
 plugins: [jekyll-paginate, jekyll-feed, jekyll-sitemap]
 exclude: [vendor]
+=======
+plugins_dir: [_plugins]
+plugins: [jekyll-paginate, jekyll-feed]
+>>>>>>> 9ca0fb46252ef7d83c1c9dcd5c9e47e02f6ad3f2
 
 feed:
   path: feed.xml
