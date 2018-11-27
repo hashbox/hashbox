@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
+  <link href="https://hashbox.github.io/author/ghost/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://hashbox.github.io/" rel="alternate" type="text/html" />
+  <updated>2018-11-27T00:25:52+00:00</updated>
+  <id>https://hashbox.github.io/author/ghost/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">HASHBOX | </title>
+  
+
+  
+    <subtitle>빅데이터 분야에 모험가가 되고 싶은 개발자 블로그</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+      
+    
+  
+
+  
+  
+
+  
+</feed>

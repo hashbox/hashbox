@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
+  <link href="https://hashbox.github.io/tag/solution/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://hashbox.github.io/" rel="alternate" type="text/html" />
+  <updated>2018-11-27T00:25:52+00:00</updated>
+  <id>https://hashbox.github.io/tag/solution/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">HASHBOX | </title>
+  
+
+  
+    <subtitle>빅데이터 분야에 모험가가 되고 싶은 개발자 블로그</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">맥에서 Python Matplotlib Import문제 해결 방법</title>
+      <link href="https://hashbox.github.io/Matplotlib-Mac-%EC%82%AC%EC%9A%A9" rel="alternate" type="text/html" title="맥에서 Python Matplotlib Import문제 해결 방법" />
+      <published>2018-01-15T14:22:00+00:00</published>
+      <updated>2018-01-15T14:22:00+00:00</updated>
+      <id>https://hashbox.github.io/Matplotlib-Mac-%EC%82%AC%EC%9A%A9</id>
+      <content type="html" xml:base="https://hashbox.github.io/Matplotlib-Mac-%EC%82%AC%EC%9A%A9">&lt;blockquote&gt;
+  &lt;p&gt;필자는 맥에서 virtualenv를 통해 Python을 사용하고 있습니다. 데이터 관련 그래프를 사용하기 위해 &lt;code class=&quot;highlighter-rouge&quot;&gt;matplotlib&lt;/code&gt;을 설치하고 &lt;code class=&quot;highlighter-rouge&quot;&gt;import&lt;/code&gt;를 하는 구문에서 다음과 같은 에러가 나타났습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;RuntimeError: Python is not installed as a framework. The Mac OS X backend will not be able to &lt;span class=&quot;k&quot;&gt;function &lt;/span&gt;correctly &lt;span class=&quot;k&quot;&gt;if &lt;/span&gt;Python is not installed as a framework. See the Python documentation &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;more information on installing Python as a framework on Mac OS X. Please either reinstall Python as a framework, or try one of the other backends. If you are using &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Ana&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;Conda please install python.app and replace the use of &lt;span class=&quot;s1&quot;&gt;'python'&lt;/span&gt; with &lt;span class=&quot;s1&quot;&gt;'pythonw'&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; See &lt;span class=&quot;s1&quot;&gt;'Working with Matplotlib on OSX'&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;the Matplotlib FAQ &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;more information.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;맥에서는 &lt;code class=&quot;highlighter-rouge&quot;&gt;matplotlib&lt;/code&gt;를 사용하는데 있어서 추가적인 조치가 필요하다는 것을 찾았고 해결방법을 찾았습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;해결방법1-스크립트-내-명기&quot;&gt;해결방법#1 스크립트 내 명기&lt;/h2&gt;
+
+&lt;p&gt;Python 스크립트 내에서 사용할 때마다 매번 추가해주는 방법으로 해결이 가능합니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;matplotlib&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'TkAgg'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;위와 같이 &lt;code class=&quot;highlighter-rouge&quot;&gt;matplotlib&lt;/code&gt;의 backend를 &lt;code class=&quot;highlighter-rouge&quot;&gt;TkAgg&lt;/code&gt;로 설정을 하면 오류를 해결할 수 있습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;해결방법2-설정파일-명기&quot;&gt;해결방법#2 설정파일 명기&lt;/h2&gt;
+
+&lt;p&gt;저와 같은 경우에는 이 방법을 사용하고 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;backend: TkAgg&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; ~/.matplotlib/matplotlibrc
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;이 방법은 한번 설정만 하면 매 스크립트마다 추가를 해줄 필요가 없기 때문에 가장 편한 방법으로 생각됩니다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;독자분들도 같은 오류를 뿜어낸다면 위와 같은 방법으로 모두 해결되리라 생각됩니다. 감사합니다.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>한지승(Jee Seung, Han)</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="develop" />
+      
+        <category term="solution" />
+      
+
+      
+        <summary type="html">필자는 맥에서 virtualenv를 통해 Python을 사용하고 있습니다. 데이터 관련 그래프를 사용하기 위해 matplotlib을 설치하고 import를 하는 구문에서 다음과 같은 에러가 나타났습니다.</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>
