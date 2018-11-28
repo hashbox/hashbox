@@ -4,7 +4,7 @@ current: post
 cover: False
 navigation: True
 title: SSH환경에서 X11 Forwarding을 이용한 Matplotlib 사용
-date: 2018-11-28 10:00:00
+date: 2018-11-27 10:00:00
 tags: develop solution
 class: post-template
 subclass: 'post tag-develop'
