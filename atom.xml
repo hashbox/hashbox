@@ -7,6 +7,20 @@
     
       
       <item>
+        <title>SSH환경에서 X11 Forwarding을 이용한 Matplotlib 사용</title>
+        
+          <description>&lt;p&gt;&lt;img src=&quot;https://uechi.io/uploads/x11-plot.png&quot; alt=&quot;출처 : https://uechi.io/blog/x11forward&quot; /&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 27 Nov 2018 10:00:00 +0000</pubDate>
+        <link>https://hashbox.github.io/%EC%9B%90%EA%B2%A9SSH-Matplotlib-Mac-X11Forwarding</link>
+        <guid isPermaLink="true">https://hashbox.github.io/%EC%9B%90%EA%B2%A9SSH-Matplotlib-Mac-X11Forwarding</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>맥에서 Python Matplotlib Import문제 해결 방법</title>
         
           <description>&lt;blockquote&gt;
